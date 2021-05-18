@@ -59,22 +59,23 @@ class ShuffleCards(Deck):
             return (cardpopped)
 
 
-# Driver Code
-# Creating objects
-objCards = Cards()
-objDeck = Deck()
+if __name__ == "__main__":
+    # Driver Code
+    # Creating objects
+    objCards = Cards()
+    objDeck = Deck()
 
-# Player 1
-player1Cards = objDeck.mycardset
-print('\n Player 1 Cards: \n', player1Cards)
+    # Player 1
+    player1Cards = objDeck.mycardset
+    print('\n Player 1 Cards: \n', player1Cards)
 
-# Creating object
-objShuffleCards = ShuffleCards()
+    # Creating object
+    objShuffleCards = ShuffleCards()
 
-# Player 2
-player2Cards = objShuffleCards.shuffle()
-print('\n Player 2 Cards: \n', player2Cards)
+    # Player 2
+    player2Cards = objShuffleCards.shuffle()
+    print('\n Player 2 Cards: \n', player2Cards)
 
-# Remove some cards
-print('\n Removing a card from the deck:', objShuffleCards.popCard())
-print('\n Removing another card from the deck:', objShuffleCards.popCard())
+    # Remove some cards
+    print('\n Removing a card from the deck:', objShuffleCards.popCard())
+    print('\n Removing another card from the deck:', objShuffleCards.popCard())
