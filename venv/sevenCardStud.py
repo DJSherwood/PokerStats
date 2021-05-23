@@ -11,5 +11,29 @@ The order of play is
 
 This script mimics the game.
 '''
-
 import shuffle_cards as sc
+import player as p
+
+# create a deck - view cards with created_deck.mycardset
+created_deck = sc.ShuffleCards()
+# shuffle the new deck - view cards with created_deck.mycardset
+created_deck.shuffle()
+# create 4 players
+p1, p2, p3, p4 = p.player(), p.player(), p.player(), p.player()
+# deal 2 cards down and 1 card up to every player
+# round 1
+p1.receive_hidden(created_deck.popCard())
+p2.receive_hidden(created_deck.popCard())
+p3.receive_hidden(created_deck.popCard())
+p4.receive_hidden(created_deck.popCard())
+# round 2
+p1.receive_hidden(created_deck.popCard())
+p2.receive_hidden(created_deck.popCard())
+p3.receive_hidden(created_deck.popCard())
+p4.receive_hidden(created_deck.popCard())
+# round 3
+p1.receive_shown(created_deck.popCard())
+p2.receive_shown(created_deck.popCard())
+p3.receive_shown(created_deck.popCard())
+p4.receive_shown(created_deck.popCard())
+# evaluate ?
